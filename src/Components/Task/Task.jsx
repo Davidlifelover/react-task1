@@ -1,8 +1,10 @@
 import './Task.css';
+import { formatDistanceToNow } from 'date-fns';
 import PropTypes from 'prop-types';
 
+
 export default function Task({ description, created, onDeleted, onToggleDone, done, handleKeyDown  }) {
-  // const distanceToNow = formatDistanceToNow(new Date(created), { includeSeconds: true });
+  const distanceToNow = formatDistanceToNow(new Date(created), { includeSeconds: true });
 
   let classNames = 'description';
   if (done) {
@@ -28,7 +30,7 @@ export default function Task({ description, created, onDeleted, onToggleDone, do
           >
             {description}
           </span>
-          {/* <span className="created">created {distanceToNow} ago</span> */}
+          <span className="created">created {distanceToNow} ago</span>
         </label>
         <button type="button" className="icon icon-edit" aria-label="Edit task" />
         <button 

@@ -31,7 +31,7 @@ TaskList.propTypes = {
   tasks: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     description: PropTypes.string.isRequired,
-    // created: PropTypes.instanceOf(Date).isRequired,
+    created: PropTypes.instanceOf(Date).isRequired,
     done: PropTypes.bool.isRequired
   })),
   onDeleted: PropTypes.func,
